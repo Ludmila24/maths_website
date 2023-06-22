@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questions</title>
+  <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a class="Home" href="../index.html">Home</a></li>
+      <li><a class="constant" href="../pages/constant.html">The constant of Integration</a> </li>
+      <li><a class="integration" href="../pages/integration.html">Integrating f(x)=x<sup>n</sup></a> </li>
+      <li><a class="questions" href="../pages/questions.html">Practice Questions</a></li>
+      <li><a class="feedback" href="../pages/feedback.html">Feedback Form</a></li>
+      <li><a class="AboutOurCompany" href="../pages/AboutOurCompany.html">About Our Company</a></li>
+    </ul>
+  </nav>
+  <h2 class="print-out2">Complete these exercises to stenghten your knowledge</h2>
+  
+  <p class="print-out2">Take a pen and paper and solve these equations. Then click on the answer button to check the answer.<br><h3> To refresh the page use Ctrl + R</h3></p>
+
+
+  <p class="print-out2"><em>&int; 10x<sup>4</sup> dx &equals;</em></p>
+  
+  <p id="demo" style="display:none"><em>&equals; 10x<sup>5</sup> &mid; 5 &plus; C &equals; 2x<sup> 5 &plus; C</sup> </em></p>
+  
+  <button class="print-out2" type="button" onclick="document.getElementById('demo').style.display='block'">answer</button>
+
+
+  <p class="print-out2"><em>&int; (3x &plus; 5x<sup>2</sup>) dx &equals; </em></p>
+
+  
+  <p class="print-out2" id="demo1" style="display:none"><em>&equals; 3x<sup>2</sup>&mid;2  &plus;  5x<sup>3</sup> &mid; 3 &plus; C</em>
+  </p>
+
+<button class="print-out2" type="button" onclick="document.getElementById('demo1').style.display='block'">answer</button>
+
+
+<p class="print-out2"><em>&int; x<sup>2</sup> (3x &plus; 2) dx &equals; </em></p>
+
+
+<p class="print-out2"id="demo2" style="display:none"><em>&equals; &int; (3x<sup>3</sup> &plus; 2x<sup>2</sup>)dx &equals; 3x<sup>4</sup> &mid; 4 &plus; 2x<sup>2</sup> &plus; C &equals; 3x<sup>4</sup> &mid; 4 &plus; 2x<sup>3</sup> &mid; 3 &plus; C</em>
+</p>
+
+<button class="print-out2" type="button" onclick="document.getElementById('demo2').style.display=''">answer</button><br>
+
+<p id="calculator">You can use this basic calculator to perform basic arithmetic calculations</p>
+<form id="calculator-input">
+  value 1: <input type="text" id="value1"><br>
+  value 2: <input type="text" id="value2"><br>
+  Operator: 
+  <select id="Operator">
+    <option value="add">Add</option>
+    <option value="min">Minus</option>
+    <option value="div">Divide</option>
+    <option value="mul">Multiply</option>
+  </select>
+
+  <button type="button" onclick = "calc()">Calculate</button>
+
+</form>
+<div id="result"></div>
+
+
+<script>
+  function calc() {
+    var a = parseInt(document.querySelector("#value1").value);
+    var b = parseInt(document.querySelector("#value2").value);
+    var op = document.querySelector("#Operator").value;
+    var calculate;
+
+    if (op == "add") {
+      calculate = a + b;
+    }
+    else if (op == "min") {
+      calculate = a - b;
+    }
+    else if (op == "div") {
+      calculate = a / b;
+    }
+    else if (op == "mul") {
+      calculate = a * b;
+    }
+    
+    document.querySelector("#result").innerHTML = calculate;
+  }
+
+</script>
+
+
+
+</body>
+</html>
